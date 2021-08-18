@@ -1,0 +1,19 @@
+.background {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    width: 70%;
+    margin:auto;
+}
+.border-card-left{
+    margin-left: 50px;
+    margin-right: 2px;
+    margin-top: 10px;
+    max-width: 100%;
+}
+
+.border-card-right{
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-right: 50px;
+    max-width: 100%;
+}
