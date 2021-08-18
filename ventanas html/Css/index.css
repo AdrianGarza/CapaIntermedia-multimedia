@@ -17,3 +17,9 @@
     margin-right: 50px;
     max-width: 100%;
 }
+
+.navbar .d-flex .me-2{
+    margin-left: 2%;
+    width: 70%;
+}
+

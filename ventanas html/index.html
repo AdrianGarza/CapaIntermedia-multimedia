@@ -12,7 +12,15 @@
 </head>
 <body>
   <nav class="navbar navbar-light bg-light ">
-    <div class="container-fluid">
+    <div class="container-fluid ">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Iniciar sesion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Crear sesion</a>
+        </li>
+      </ul>
       <a class="navbar-brand" href="#">
         <img src="/resources/logo.png" alt="logo" width="40" height="33" class="d-inline-block align-text-top">
         Emageth
@@ -22,14 +30,16 @@
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
+          <img src="/resources/logo.png" alt="logo" width="40" height="33" class="d-inline-block align-text-tops">
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Emageth</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Categorias
@@ -42,10 +52,7 @@
               </ul>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
-          </form>
+          
         </div>
       </div>
     </div>
