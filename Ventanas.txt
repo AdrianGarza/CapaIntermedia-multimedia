@@ -7,3 +7,7 @@
 -Ventana de pago + 
 -inicio sesion +
 -crear cuenta +
+
+**Repositiry name CapaMultimediaProy
+
+git remote add CapaMultimediaProy https://github.com/AdrianGarza/CapaIntermedia-multimedia.git
