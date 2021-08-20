@@ -22,4 +22,9 @@
     height: 500px !important;
     width: 100%;
 }
+.bottomcard{
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+}
 
