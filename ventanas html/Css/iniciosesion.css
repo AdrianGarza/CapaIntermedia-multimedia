@@ -1,0 +1,38 @@
+.background {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    width: 70%;
+    margin:auto;
+}
+
+.formulario{
+
+    padding:80px;
+}
+
+.iniciar {
+    background-color: black;
+    border-radius: 50px;
+    padding: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color:white;
+
+}
+
+input [type=text], select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.campo{
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
