@@ -1,0 +1,72 @@
+Categorias:
+	Nombre
+	Id
+
+Subcategoria:
+	Categorias
+	Id
+
+Usuario:
+	Imagen de perfil
+	Rol (Escuela o Estudiante)
+	Nombre 
+	Apellido paterno
+	Apellido materno
+	Fecha de nacimiento
+	Email
+	Contraseña(8 caracteres con una mayuscula, un caractér especial y un numero)
+	Fecha de alta
+
+Cursos:
+	Titulo
+	Nivel
+	Costo (por curso o nivel)
+	Descripcion del curso
+	Comentarios
+	Promedio de calificacion
+	Imagen
+	archivos adjuntos
+	Forma de pago
+		
+
+Diploma:
+	Fecha de terminacion del curso
+	Curso
+	Nombre completo de alumno
+	Nombre de maestro de curso
+
+Mesnajes2personas:
+	Mensajes
+	Alumno
+	Maestro
+
+Mensaje:
+	Texto
+	EL-Quien
+
+Comentarios: 
+	texto
+	autor
+	like
+	dislike
+	
+Historial de cursos:
+	Usuario
+	Curso 
+	Progreso
+	Fecha de incripcion 
+	Fecha de inicio de algun nivel
+	Fecha de terminacion
+
+Historial de ventas
+	Maestro
+ 	cursos
+	integrantes de curso
+	ingresos totales de curso
+	
+
+	
+
+	
+	
+	
