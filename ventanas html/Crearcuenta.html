@@ -4,8 +4,9 @@
     <meta charset = "utf-8">
     <title>Iniciar Sesion</title>
     <link href="/Css/Crearcuenta.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script>
 
@@ -13,8 +14,92 @@
           $("#nav-placeholder").load("navbar.html");
         });
         $(document).ready( function (){
+
             $("#verificarCuenta").click(function(){
-                alert("Hola usuario");
+                
+                var usuario = $("#usuario").val();
+                var correo = $("#correo").val();
+                var contra = $("#contra").val();
+                var contra2 = $("#contra2").val();
+                var fechaNac = $("#datepicker").val();
+                var acceso = $("#acceso").text();
+                var alertado = false;
+                var verificado = true;
+
+                if(usuario == ""  && !alertado){
+                    alertado=true;
+                    verificado=false;
+                    alert("Por favor, llene el campo de usuario");
+                }
+                if(correo == "" && !alertado){
+                    verificado=false;
+                    alertado=true;
+                    alert("Por favor, llene el campo de correo");
+                }
+                if(contra == "" && !alertado){
+                    verificado=false;
+                    alertado=true;
+                    alert("Por favor, llene el campo de contraseña");
+                }
+                if(contra2 == "" && !alertado){
+                    verificado=false;
+                    alertado=true;
+                    alert("Por favor, llene el campo de confirmacion de contraseña");
+                }
+                if(fechaNac == "" && !alertado){
+                    verificado=false;
+                    alertado=true;
+                    alert("Por favor, llene el campo de fecha de nacimiento");
+                }
+                if(acceso == "" && !alertado){
+                    verificado=false;
+                    alertado=true;
+                    alert("Por favor, elija el tipo de cuenta ");
+                }
+                
+                if(contra.length < 8 && !alertado){
+                    alertado=true;
+                    alert("La contraseña debe tener almenos 8 caracteres");
+                    verificado = false;
+                }
+                if(/^[a-zA-Z0-9- ]*$/.test(contra) && !alertado) {
+                    verificado = false;
+                    alertado=true;
+                    alert('La contraseña debe tener almenos un caracter especial');
+                }
+
+                if(!/[A-Z]/.test(contra) && !alertado){
+                    verificado = false;
+                    alertado=true;
+                    alert("La contraseña debe tener almenos una mayuscula");
+                
+                }
+                if(!/[0-9]/.test(contra) && !alertado){
+                    verificado = false;
+                    alertado=true;
+                    alert("La contraseña debe tener almenos un número");
+                }
+                if(contra != contra2){
+                    verificado = false;
+                    alertado=true;
+                    alert("Las contraseñas no coinciden");
+                }
+                
+                
+                if(verificado){
+                    alert("Bienvenido");
+                }
+
+            });
+            
+            $(".it").click(function(){
+                var $this = $(this).text();
+                $("#acceso").empty();
+                $("#acceso").append($this);
+            });
+
+            $(function () {
+                $("#datepicker").datepicker({ dateFormat: 'yy-mm-dd' });
             });
         });
     </script>
@@ -28,27 +113,42 @@
                 <form action="">
                     <label for="fname">Usuario</label>
                     <br>
-                    <input class="campo" type="text" placeholder="Usuario">
+                    <input class="campo" type="text" id="usuario" placeholder="Usuario">
                     <br>
                     <br>
                     <label for="fname">Correo electronico</label>
                     <br>
-                    <input class="campo" type="text" placeholder="ejemplo@gmail.com">
+                    <input class="campo" type="text" id="correo" placeholder="ejemplo@gmail.com">
                     <br>
                     <br>
                     <label for="lname">Contraseña</label>
                     <br>
-                    <input  class="campo" type="password"  placeholder="Contraseña">
+                    <input  class="campo" type="text"  id="contra" placeholder="Contraseña">
                     <br>
                     <br>
                     <label for="fname">Confirmar contraseña</label>
                     <br>
-                    <input class="campo" type="password" placeholder="Confirmacion de contraseña">
+                    <input class="campo" type="password" id="contra2" placeholder="Confirmacion de contraseña">
                     <br>
                     <br>
+                    <label for="fname">Fecha de Nacimiento</label>
+                    <br>
+                    <input type="datepicker" name="dob" id="datepicker" class="campo"> 
+                    <br>
+                    <br>
+                    <div class="dropdown show combo dropend">
+                        <button class="iniciar" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tipo de cuenta</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item it"  class="accesoTipo"  href="#">Maestro</a>
+                            <a class="dropdown-item it" class="accesoTipo" href="#">Alumno</a>
+                        </div>
+                    </div>
+                    <label for ="lname" id="acceso" id="tipo"></label>
                 </form>
             <button class="iniciar" id="verificarCuenta">Crear cuenta</button>
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 </html>

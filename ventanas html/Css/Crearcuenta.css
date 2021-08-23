@@ -37,3 +37,13 @@ input [type=text], select{
     border-radius: 4px;
     box-sizing: border-box;
 }
+
+.combo{
+    margin:10px;
+}
+
+#acceso{
+    font-weight: 300;
+    font-size:50px;
+    margin-bottom: 10px;
+}
