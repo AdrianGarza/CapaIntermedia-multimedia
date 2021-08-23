@@ -36,3 +36,13 @@ input [type=text], select{
     border-radius: 4px;
     box-sizing: border-box;
 }
+
+.Paginaton{
+
+    position: relative;
+    background-color: #fff;
+    display:flex;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}

@@ -19,6 +19,23 @@
         $("#curso1").click(function (){
           window.location.href = 'CursoDetalle.html';
         });
+        
+        $(".next").click(function(){
+          $(".Pagination").find(".pageNumber.active").next().addClass('active');
+          $(".Pagination").find(".pageNumber.active").prev().removeClass('active');
+
+        });
+
+        $(".prev").click(function(){
+          $(".Pagination").find(".pageNumber.active").prev().addClass('active');
+          $(".Pagination").find(".pageNumber.active").next().removeClass('active');
+
+        });
+        
+        $(".pageNumber").click(function(){
+          $(".Pagination").find(".pageNumber.active").removeClass('active');
+          $(this).addClass("active");
+        });
 
       });
     </script>
@@ -107,6 +124,18 @@
       </div>
 
     </div>
+
+    <!-- Aqui terminan los cursos-->
+    <ul class="Pagination">
+      <li><a href="#" class="prev">< Prev </a></li>
+      <li class="pageNumber active"><a href="#">1</a></li>
+      <li class="pageNumber"><a href="#">2</a></li>
+      <li class="pageNumber"><a href="#">3</a></li>
+      <li class="pageNumber"><a href="#">4</a></li>
+      <li class="pageNumber"><a href="#">5</a></li>
+      <li class="pageNumber"><a href="#">6</a></li>
+      <li><a href="#" class="next">Next ></a></li>
+    </ul>
     
   </div>
   

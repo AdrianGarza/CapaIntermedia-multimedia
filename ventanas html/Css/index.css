@@ -1,8 +1,8 @@
 .background {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
     width: 70%;
     margin:auto;
+    padding-bottom: 10px;
 }
 .border-card-left{
     margin-left: 50px;
@@ -31,5 +31,56 @@
 
 .card:hover{
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    box-shadow: 0 10px 20px rgba(0,0,0,.3), 0 4px 8px rgb(0, 0, 0,.7);
+}
+
+.Pagination{
+    justify-content: center;
+    position: relative ;
+    background-color: #fff;
+    display:flex;
+    margin:auto 20%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+
+.Pagination li{
+    list-style: none;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+.Pagination li.pageNumber{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+
+.Pagination li a{
+    display: block;
+    text-decoration: none;
+    color:#777;
+    font-weight: 600;
+    border-radius: 50%;
+}
+
+.Pagination li.pageNumber:hover a,
+.Pagination li.pageNumber.active a{
+    background:#333;
+    color:#fff;
+}
+
+.Pagination li:first-child{
+    margin-right: 30px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.Pagination li:last-child{
+    margin-left: 30px;
+    font-weight: 700;
+    font-size: 20px;
 }
