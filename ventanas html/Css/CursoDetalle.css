@@ -2,13 +2,15 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    display: block
+    display: block;
+    border-radius: 2%;
 }
 .background {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     width: 70%;
-    padding-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
     margin:auto;
 }
 .niveles{
@@ -16,20 +18,19 @@
 }
 
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
     left: 0;
     text-align: center;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    background-color: #111;
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
 }
   
-  /* The navigation menu links */
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -39,12 +40,10 @@
     transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
     color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -53,9 +52,93 @@
     margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;
     padding: 20px;
 }
 
+.cajacomentario{
+    width: 50% !important;
+    margin:auto;
+    margin-bottom: 10px;
+}
+
+.comentario {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 70%;
+    margin:auto;
+    padding: 20px;
+}
+.comentario img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.contenido{
+    text-align: left;
+    
+}
+.comentarioimg{
+    width: 9%;
+    float:left;
+}
+#Pagination{
+    justify-content: center;
+    position: relative ;
+    background-color: #fff;
+    display:flex;
+    margin:auto 20%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+
+#otherdiv{
+    opacity: 100%;
+    transition: 0.3s;
+}
+
+#Pagination li{
+    list-style: none;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+#Pagination li.pageNumber{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+
+#Pagination li a{
+    display: block;
+    text-decoration: none;
+    color:#777;
+    font-weight: 600;
+    border-radius: 50%;
+}
+
+#Pagination li.pageNumber:hover a,
+#Pagination li.pageNumber.active a{
+    background:#333;
+    color:#fff;
+}
+
+#Pagination li:first-child{
+    margin-right: 30px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#Pagination li:last-child{
+    margin-left: 30px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.iconos{
+    float:right;
+}

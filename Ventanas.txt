@@ -1,12 +1,12 @@
--Pagina principal +
+-Pagina principal +-
 -Perfil y ajustes +
--Detalles de curso +
+-Detalles de curso +-
 -Crear curso +
 -Diploma
 -Mensajes +
 -Ventana de pago + 
--inicio sesion +
--crear cuenta +
+-inicio sesion +-
+-crear cuenta +-
 
 **Repositiry name CapaMultimediaProy
 
