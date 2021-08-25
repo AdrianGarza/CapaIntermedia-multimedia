@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <meta charset = "utf-8">
+    <title> Emageht</title>
+    <link href="/Css/CrearCurso.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+
+        $(function(){
+        $("#nav-placeholder").load("navbar.html");
+        });
+
+        $(document).ready( function (){
+
+            $("#AgNivel").click(function(){
+
+                $(".niveles").append(
+                '<div class="Nivel">'
+                    +'<span class="titulo">Laverga nos trajo y la verga nos va a llevar</span>'
+                    +'<video autoplay controls width="90%" height="70%"  class="video" muted>'
+                        +'<source src="" type="" class="source">'
+                        +'Your browser does not support the video tag u.u.'
+                    +'</video>'
+                    +'<button class="btn btn-danger delNivel">Eliminar Nivel</button>'             
+                +'</div>');
+                
+                $(".source").attr("src","/resources/pruebavid1.mp4");
+                $(".source").attr("type","video/mp4");
+
+                
+            });
+            
+            $(".niveles").on("click",".delNivel",function(){
+                $(this).parent().remove();
+            });
+
+
+
+        });
+    </script>
+
+</head>
+<body>
+
+  <div id="nav-placeholder" class="inplace">
+  </div>
+  
+  <div class="background"> 
+   <div class="container CursoForm">
+        
+        <form action="#">
+            <div class="title">Crea un curso</div>
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Títuo de curso</span>
+                    <input type="text" placeholder="Pon un título" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Descripción de curso</span>
+                    <textarea class="form-control cajacomentario" id="exampleFormControlTextarea1" rows="4">Describe tu curso</textarea>
+                </div>
+                <div class="input-box">
+                    <span class = "details">Costo</span>
+                    <input type = "text" placeholder = "Costo" required>
+                </div>
+                <br>
+            </div>
+
+            <div class="gender-details title">
+                <span >Tipo de pago</span>
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Costo por curso</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Costo por nivel</span>                        
+                    </label>
+                </div>
+            </div>
+
+            <div class=" agregarNivelbtn">
+                <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#NuevoNivel">Agregar nivel</button>
+            </div>
+            
+            <label for="formFile" class="form-label">Portada de curso</label>
+            <input class="form-control" type="file" id="formFile">
+            
+            <div class="niveles">
+
+            </div>
+            
+            <br>
+            
+            <div class="button">
+                <input type="submit" class="btn btn-dark" value="Register">
+            </div>
+        </form>
+   </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="NuevoNivel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Nuevo nivel</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <span class="details">Título del nivel</span>
+            <input type="text" placeholder="Ponle un nombre al nivel del curso" required>
+            <span class="details">Video del nivel</span>
+            <input type="file" id="inputvid" >
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>
+          <button type="button" class="btn btn-dark" id="AgNivel" data-bs-dismiss="modal">Agregar Nivel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  
+  
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</html>
