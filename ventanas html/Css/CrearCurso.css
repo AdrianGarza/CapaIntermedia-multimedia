@@ -131,9 +131,8 @@ form .button :hover{
     width: 100%;
     text-align: center;
 	position: relative;
-    padding:10px;
-	margin-left: 10px;
-	margin-top: 10px;
+    padding: 10px;
+	margin: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
 }
@@ -146,4 +145,25 @@ form .button :hover{
     font-weight: 600;
 }
 
+.Nivel button{
+    margin:10px;
+}
 
+.file{
+    margin-bottom:15px;
+}
+
+.portada{
+    display:flex;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding:10px;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.portada img{
+    max-width:80%;
+    margin: 10px;
+    border-radius: 10px;
+}

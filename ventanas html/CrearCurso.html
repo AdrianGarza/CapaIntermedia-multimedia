@@ -15,20 +15,26 @@
 
             $("#AgNivel").click(function(){
 
+                var titulo = $("#TituloNivel").val();
+
                 $(".niveles").append(
                 '<div class="Nivel">'
-                    +'<span class="titulo">Laverga nos trajo y la verga nos va a llevar</span>'
-                    +'<video autoplay controls width="90%" height="70%"  class="video" muted>'
-                        +'<source src="" type="" class="source">'
-                        +'Your browser does not support the video tag u.u.'
-                    +'</video>'
-                    +'<button class="btn btn-danger delNivel">Eliminar Nivel</button>'             
+                    +'<span class="titulo">'+titulo+'</span>'
+                    +'<div class="VideoTitulo">'
+                        +'<video autoplay controls width="90%" height="70%"  class="video" muted>'
+                            +'<source src="" type="" class="source">'
+                            +'Your browser does not support the video tag u.u.'
+                        +'</video>'
+                    +'</div>'
+                    +'<button class="btn btn-danger delNivel">Eliminar Nivel</button>'
+                    +'<button class="btn btn-dark ">Editar Nivel</button>'              
                 +'</div>');
                 
+
                 $(".source").attr("src","/resources/pruebavid1.mp4");
                 $(".source").attr("type","video/mp4");
 
-                
+                var titulo = $("#TituloNivel").val("");
             });
             
             $(".niveles").on("click",".delNivel",function(){
@@ -83,16 +89,22 @@
                 </div>
             </div>
 
+            
+            <div class="file">            
+                <label for="formFile" class="form-label">Portada de curso</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="portada">
+                <img src="resources/AA.jpg">
+            </div>
+            <div class="niveles">
+                <!--En este div van los niveles agregados-->
+            </div>
+            
             <div class=" agregarNivelbtn">
                 <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#NuevoNivel">Agregar nivel</button>
             </div>
-            
-            <label for="formFile" class="form-label">Portada de curso</label>
-            <input class="form-control" type="file" id="formFile">
-            
-            <div class="niveles">
 
-            </div>
             
             <br>
             
@@ -112,10 +124,14 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <span class="details">Título del nivel</span>
-            <input type="text" placeholder="Ponle un nombre al nivel del curso" required>
-            <span class="details">Video del nivel</span>
-            <input type="file" id="inputvid" >
+            <form>
+                <span class="details">Título del nivel</span>
+                <input type="text" placeholder="Ponle un nombre al nivel del curso" required id="TituloNivel">
+                <div class="file">            
+                    <label for="formFile" class="form-label">Portada de curso</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+            </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>
