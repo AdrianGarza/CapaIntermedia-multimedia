@@ -10,6 +10,9 @@
         $(function(){
         $("#nav-placeholder").load("navbar.html");
         });
+        $(function(){
+        $("#foot").load("footer.html");
+        });
 
         $(document).ready( function (){
 
@@ -37,8 +40,19 @@
                 var titulo = $("#TituloNivel").val("");
             });
             
+            $(".agCat").click(function(){
+                var categoria = $(this).text();
+                $(".categoriasCurso").append('<div class="categoria cat">'+categoria+'<button class="btn btn-danger">X</button></div>');
+
+
+            });
+
             $(".niveles").on("click",".delNivel",function(){
                 $(this).parent().remove();
+            });
+
+            $(".categoriasCurso").on("click",".cat",function(){
+                $(this).remove();
             });
 
 
@@ -104,11 +118,15 @@
             <div class=" agregarNivelbtn">
                 <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#NuevoNivel">Agregar nivel</button>
             </div>
-
-            
             <br>
-            
-            <div class="button">
+            <div class="agregarCategorybtn">
+                <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#NuevaCategoria">Agregar categoria</button>
+            </div>
+            <div class="categoriasCurso">
+            </div>
+            <br>
+            <br> <br> <br>
+            <div class="button reg">
                 <input type="submit" class="btn btn-dark" value="Register">
             </div>
         </form>
@@ -140,7 +158,38 @@
       </div>
     </div>
   </div>
- 
+
+  <div class="modal fade" id="NuevaCategoria" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Nueva categoria</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="agregarCat">
+                <div class="input-box">
+                    <span class="details">Agregar una categoria</span>
+                    <input type="text" placeholder="Pon un título" required>
+                    <br>
+                    <button type="button" class="btn btn-dark" id="AgNivel" data-bs-dismiss="modal">Agregar categoria</button>
+                </div>
+            </div>
+            <div class="categoria agCat">Tecnologias</div>
+            <div class="categoria agCat">Artes</div>
+            <div class="categoria agCat">Programacion</div>
+            <div class="categoria agCat">Videojuegos</div>
+            <div class="categoria agCat">Culinaria</div>
+        </div>
+        
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="foot"class="inplace">
+
+  </div>
   
   
 </body>

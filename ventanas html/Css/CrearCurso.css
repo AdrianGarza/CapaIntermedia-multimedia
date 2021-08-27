@@ -42,7 +42,8 @@ form .user-details .input-box{
 }
 
 .user-details .input-box input,
-.modal-body input{
+.modal-body input,
+.modal-body .input-box input{
     height: 35px;
     width: 100%;
     outline: none;
@@ -167,3 +168,32 @@ form .button :hover{
     margin: 10px;
     border-radius: 10px;
 }
+
+.agregarCategorybtn{
+    display: flex ;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-body .categoria:hover{
+    transform:scale(1.05);
+}
+
+.categoria{
+    width: auto;
+	height: auto;
+    padding:10px;
+	background-color: rgb(209, 209, 209);
+    border-radius: 10px;
+	position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.categoria button{
+    font-size: 10px;
+    padding:2px;
+}
+
