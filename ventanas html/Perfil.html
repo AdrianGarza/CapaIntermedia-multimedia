@@ -19,7 +19,7 @@
       });
 
       $(document).ready( function (){
-
+       
           $("#cursosPubli").click(function(){
             $(".home_content").empty();
             $(".home_content").append('<table class="table table-hover  caption-top">'
@@ -38,36 +38,42 @@
                                               +'<td>230</td>'
                                               +'<td>2.5</td>'
                                               +'<td>$350.00</td>'
+                                              +'<td><a href="CrearCurso.html"><button class="btn btn-dark"> Editar</button></a></td>'
                                            + '</tr>'
                                             +'<tr>'
                                              + '<th scope="row">Redstone para principiantes</th>'
                                               +'<td>1443</td>'
                                               +'<td>7</td>'
                                              + '<td>$4301.99</td>'
+                                             +'<td><a href="CrearCurso.html"><button class="btn btn-dark"> Editar</button></a></td>'
                                             +'</tr>'
                                            + '<tr>'
                                              + '<th scope="row">Programacion web 101</th>'
                                              + '<td>30</td>'
                                              + '<td>5</td>'
                                               +'<td>$123.29</td>'
+                                              +'<td><a href="CrearCurso.html"><button class="btn btn-dark"> Editar</button></a></td>'
                                             +'</tr>'
                                             +'<tr>'
                                              + '<th scope="row">Como gritar como tyler1</th>'
                                               +'<td>230</td>'
                                               +'<td>2.5</td>'
                                               +'<td>$350.00</td>'
+                                              +'<td><a href="CrearCurso.html"><button class="btn btn-dark"> Editar</button></a></td>'
                                             +'</tr>'
                                             +'<tr>'
                                               +'<th scope="row">Redstone para principiantes</th>'
                                              + '<td>1443</td>'
                                               +'<td>7</td>'
                                               +'<td>$4301.99</td>'
+                                              +'<td><a href="CrearCurso.html"><button class="btn btn-dark"> Editar</button></a></td>'
                                             +'</tr>'
                                             +'<tr>'
                                               +'<th scope="row">Programacion web 101</th>'
                                               +'<td>30</td>'
                                               +'<td>5</td>'
                                               +'<td>$123.29</td>'
+                                              +'<td><a href="CrearCurso.html"><button class="btn btn-dark"> Editar</button></a></td>'
                                             +'</tr>'
                                           +'</tbody>'
                                        + '</table> ');
@@ -166,6 +172,67 @@
 
 
           });
+          
+          $("#perfil").click(function(){
+            $(".home_content").empty();
+            $(".home_content").append('<div class="perfil">'
+     +                                   '<div class="grupo-dato">'
+      +                                    '<div class="dato-label">Nombre:</div>'
+       +                                   '<div class="dato">Elvis tec</div>'
+        +                                  '<button class="edit-name btn btn-secondary">Editar</button>'
+         +                               '</div>'
+          +                              '<div class="grupo-dato">'
+           +                               '<div class="dato-label">Fecha de nacimiento: </div>'
+            +                              '<div class="dato">15/11/1986</div>'
+              +                            '<button class="edit-nac btn btn-secondary">Editar</button>'
+               +                         '</div>'
+                +                        '<div class="grupo-dato">'
+                 +                         '<div class="dato-label">Correo electronico: </div>'
+                  +                        '<div class="dato">oasjnd@gmail.net</div>'
+                   +                       '<button class="edit-email btn btn-secondary">Editar</button>'
+                    +                    '</div>'
+                     +                   '<div class="grupo-dato grupo-rol">'
+                      +                    '<div class="dato-label rol-label">Ocupacion:</div>'
+                       +                   '<div class="dato rol-dato">Maestro</div>'
+                        +                '</div>'
+                         +             '</div>');
+          });
+
+          $("#kardex").click(function(){
+            $(".home_content").empty();
+            $(".home_content").append('<table class="table table-hover  caption-top">'
+         +                                   '<caption>Cursos publicados</caption>'
+          +                                  '<thead >'
+           +                                   '<tr>'
+            +                                    '<th scope="col">Nombre de Curso</th>'
+             +                                   '<th scope="col">Progreso</th>'
+              +                                  '<th scope="col">Fecha de inicio</th>'
+               +                                 '<th scope="col">Fecha de fin</th>'
+                +                              '</tr>'
+                  +                          '</thead>'
+                   +                         '<tbody>'
+                    +                          '<tr>'
+                     +                           '<th scope="row">Como gritar como tyler1</th>'
+                      +                          '<td>30%</td>'
+                       +                         '<td>20/01/2020</td>'
+                        +                      '<td>15/08/2020</td>'
+                          +                    '</tr>'
+                           +                   '<tr>'
+                            +                    '<th scope="row">Como gritar como tyler1</th>'
+                             +                   '<td>30%</td>'
+                              +                  '<td>20/01/2020</td>'
+                               +                 '<td>15/08/2020</td>'
+                                +              '</tr>'
+                                 +             '<tr>'
+                                  +              '<th scope="row">Como gritar como tyler1</th>'
+                                   +             '<td>30%</td>'
+                                    +            '<td>20/01/2020</td>'
+                                     +           '<td>15/08/2020</td>'
+                                      +        '</tr>'
+                                       +     '</tbody>'
+                                        +  '</table> ');
+
+          });
       });
 
     </script>
@@ -186,21 +253,33 @@
             <div class="logo_content">
               <div class="logo">
                 <i class='bx bxs-cog'></i>
-                <div class="logo_name">Perfil</div>
+                <div class="logo_name">Opciones</div>
               </div>
               <i class='bx bx-menu' id="btn"></i>
             </div>
-            <ul class="nav_list">              
-              <li>
+            <ul class="nav_list">
+              <li id="perfil">
                 <a href="#">
                   <i class='bx bx-grid-alt' ></i>
-                  <span class="links_name" id="cursosPubli">Cursos publicados</span>
+                  <span class="links_name" >Perfil</span>
+                </a>
+              </li>     
+              <li id="kardex">
+                <a href="#">
+                  <i class='bx bx-grid-alt' ></i>
+                  <span class="links_name">Historial</span>
+                </a>
+              </li>           
+              <li id="cursosPubli">
+                <a href="#">
+                  <i class='bx bx-grid-alt' ></i>
+                  <span class="links_name" >Cursos publicados</span>
                 </a>
               </li>
-              <li>
+              <li id="detalles">
                 <a href="#">
                   <i class='bx bx-grid-alt' ></i>
-                  <span class="links_name" id="detalles">Detalles de cursos</span>
+                  <span class="links_name" >Detalles de cursos</span>
                 </a>
               </li>
             </ul>
@@ -222,7 +301,29 @@
       <div class="col-sm-9">
 
         <div class="home_content">
-          <!--  Cursos
+          <!-- Perfil -->
+          <div class="perfil">
+            <div class="grupo-dato">
+              <div class="dato-label">Nombre:</div>
+              <div class="dato">Elvis tec</div>
+              <button class="edit-name btn btn-secondary">Editar</button>
+            </div>
+            <div class="grupo-dato">
+              <div class="dato-label">Fecha de nacimiento: </div>
+              <div class="dato">15/11/1986</div>
+              <button class="edit-nac btn btn-secondary">Editar</button>
+            </div>
+            <div class="grupo-dato">
+              <div class="dato-label">Correo electronico: </div>
+              <div class="dato">oasjnd@gmail.net</div>
+              <button class="edit-email btn btn-secondary">Editar</button>
+            </div>
+            <div class="grupo-dato grupo-rol">
+              <div class="dato-label rol-label">Ocupacion:</div>
+              <div class="dato rol-dato">Maestro</div>
+            </div>
+          </div>
+           <!--Cursos
             <table class="table table-hover  caption-top">
               <caption>Cursos publicados</caption>
               <thead >
@@ -239,12 +340,14 @@
                   <td>230</td>
                   <td>2.5</td>
                   <td>$350.00</td>
+                  <td><a href="CrearCurso.html"><button class="btn btn-dark"> Editar</button></a></td>
                 </tr>
                 <tr>
                   <th scope="row">Redstone para principiantes</th>
                   <td>1443</td>
                   <td>7</td>
                   <td>$4301.99</td>
+                  <td><a href="CrearCurso.html"><button class="btn btn-dark"> Editar</button></a></td>
                 </tr>
                 <tr>
                   <th scope="row">Programacion web 101</th>
@@ -271,8 +374,7 @@
                   <td>$123.29</td>
                 </tr>
               </tbody>
-            </table> 
-          -->
+            </table> -->
           <!--  Curso a detalle
           <div class="table-responsive">
               <table class="table table-hover caption-top ">
@@ -365,7 +467,40 @@
             
           </div>
           -->
-    
+          <!--Kardex
+          <table class="table table-hover  caption-top">
+            <caption>Cursos publicados</caption>
+            <thead >
+              <tr>
+                <th scope="col">Nombre de Curso</th>
+                <th scope="col">Progreso</th>
+                <th scope="col">Fecha de inicio</th>
+                <th scope="col">Fecha de fin</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Como gritar como tyler1</th>
+                <td>30%</td>
+                <td>20/01/2020</td>
+                <td>15/08/2020</td>
+              </tr>
+              <tr>
+                <th scope="row">Como gritar como tyler1</th>
+                <td>30%</td>
+                <td>20/01/2020</td>
+                <td>15/08/2020</td>
+              </tr>
+              <tr>
+                <th scope="row">Como gritar como tyler1</th>
+                <td>30%</td>
+                <td>20/01/2020</td>
+                <td>15/08/2020</td>
+              </tr>
+              
+            </tbody>
+          </table> 
+        -->
         </div>
       </div>
     </div>

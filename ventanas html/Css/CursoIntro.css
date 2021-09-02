@@ -1,0 +1,63 @@
+.background {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 70%;
+    margin:auto;
+    top:0;
+    padding-bottom: 10px;
+}
+
+.caracteristicas .header{
+    background-color: #000;
+    color: white;
+    text-align: center;
+}
+
+.caracteristicas .header .portada img{
+    width:99%;
+    height:70%;
+    border-radius: 10px;
+}
+
+.caracteristicas .content .titulo-Descripcion{
+    text-align: center;
+    font-size: 40px;
+} 
+.caracteristicas .content .descripcion{
+    margin:40px;
+    text-align: center;
+}
+
+.caracteristicas .content{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.caracteristicas .niveles .niveles-Titulo{
+    text-align: center;
+    font-size:30px;
+    font-weight: 400;
+}
+
+.caracteristicas .niveles .niveles-curso{
+    width: 90%;
+    margin:auto;
+    border: solid 5px rgba(0, 0, 0, 0.19);
+    display:flex;
+    padding:30px;
+    border-radius: 10px;
+}
+
+
+
+.caracteristicas .nivel .card-nivel-titulo{
+    background-color: #000;
+    color:white;
+    padding:10px;
+    border-radius: 10px;
+    float:left;
+    margin:10px;
+}
+.caracteristicas .nivel .card-nivel-titulo:hover{
+    transform: scale(1.05);
+}
+

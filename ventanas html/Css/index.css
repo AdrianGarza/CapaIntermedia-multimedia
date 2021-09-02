@@ -67,6 +67,7 @@
     border-radius: 50%;
 }
 
+
 .Pagination li.pageNumber:hover a,
 .Pagination li.pageNumber.active a{
     background:#333;
@@ -85,4 +86,8 @@
     font-size: 20px;
 }
 
+.bottomcard i{
+    width: auto;
+    float:right;
+}
 

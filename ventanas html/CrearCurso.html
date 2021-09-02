@@ -16,6 +16,7 @@
 
         $(document).ready( function (){
 
+            var gratislvlEstado = false;
             $("#AgNivel").click(function(){
 
                 var titulo = $("#TituloNivel").val();
@@ -55,6 +56,19 @@
                 $(this).remove();
             });
 
+            $("#gratislvl").click(function(){
+                if(!gratislvlEstado){
+                    $("#gratislvl").removeClass("btn-secondary");
+                    $("#gratislvl").addClass("btn-success");
+                    gratislvlEstado=true;
+                }
+                else{
+                    $("#gratislvl").removeClass("btn-success");
+                    $("#gratislvl").addClass("btn-secondary");
+                    gratislvlEstado=false;
+
+                }
+            });
 
 
         });
@@ -142,14 +156,13 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form>
-                <span class="details">Título del nivel</span>
-                <input type="text" placeholder="Ponle un nombre al nivel del curso" required id="TituloNivel">
-                <div class="file">            
-                    <label for="formFile" class="form-label">Portada de curso</label>
-                    <input class="form-control" type="file" id="formFile">
-                </div>
-            </form>
+            <span class="details">Título del nivel</span>
+            <input type="text" placeholder="Ponle un nombre al nivel del curso" required id="TituloNivel">
+            <div class="file">            
+                <label for="formFile" class="form-label">Portada de curso</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <button class="btn btn-secondary" id="gratislvl">Hacer el nivel gratis</button>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>

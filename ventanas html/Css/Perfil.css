@@ -157,3 +157,52 @@
     margin-right: 5px;
 }
 
+.perfil{
+    height:100%;
+    padding:10px;
+    text-align: center;
+}
+
+.perfil .grupo-dato{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+}
+
+.perfil .grupo-dato .dato-label{
+    
+    font-size: 20px;
+    font-weight: 500;
+}
+.perfil .grupo-dato .dato{
+    font-size: 17px;
+    font-weight: 400;
+    padding-left:20px;
+}
+
+.perfil .grupo-dato button{
+    font-size:10px;
+    padding:2px !important;
+    margin-left: 10px;
+    width:40px;
+}
+
+
+.perfil .grupo-rol{
+    display:block;
+    margin-top:30px;
+}
+
+.perfil .rol-label{
+    font-size:30px !important;
+}
+
+.perfil .rol-dato{
+    font-size:40px !important;
+    font-weight: 200 !important;
+}
+
+td button{
+    font-size:10px !important;
+}
